@@ -6,7 +6,7 @@
     <title>CLONKS NFT</title>
     <style>
         body {
-            background: #0a4d6b; /* Warna biru background logo */
+            background: #0a4d6b;
             color: white;
             margin: 0;
             min-height: 100vh;
@@ -34,7 +34,7 @@
         .clonks-text {
             font-size: 68px;
             font-weight: bold;
-            color: #f5e8c7; /* Warna cream seperti di logo */
+            color: #f5e8c7;
             text-shadow: 
                 6px 6px 0 #000,
                 -3px -3px 0 #000,
@@ -42,7 +42,6 @@
                 -3px 3px 0 #000;
             letter-spacing: 4px;
             margin: 8px 0 8px;
-            line-height: 1;
         }
         .subtitle {
             font-size: 21px;
@@ -53,15 +52,8 @@
         .mint-soon {
             font-size: 29px;
             color: #ffff00;
-            margin: 25px 0 40px;
+            margin: 20px 0 35px;
             text-shadow: 4px 4px 0 #000;
-        }
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            align-items: center;
-            margin: 10px 0 30px;
         }
         .btn {
             font-size: 18px;
@@ -78,19 +70,22 @@
             background: #f5e8c7;
             color: #0a4d6b;
         }
-        .btn-mint {
-            background: #f5e8c7;
-            color: #0a4d6b;
+        .description {
+            margin: 30px 0;
+            line-height: 1.6;
+            font-size: 17px;
+            color: #ddd;
+            padding: 0 10px;
         }
         .social {
             margin-top: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 35px;
+            gap: 40px;
         }
         .footer {
-            margin-top: 60px;
+            margin-top: 50px;
             color: #88aabb;
             font-size: 15px;
         }
@@ -107,10 +102,16 @@
         <p class="subtitle">FULLY ONCHAIN PIXEL ART NFT</p>
         <p class="mint-soon">MINT COMING SOON</p>
 
-        <div class="buttons">
-            <button class="btn">Connect Wallet</button>
-            <button class="btn btn-mint">Mint Clonks</button>
+        <div>
+            <button class="btn" onclick="alert('About Clonks coming soon!')">About</button>
         </div>
+
+        <!-- Project Description -->
+        <p class="description">
+            Clonks is a unique fully on-chain pixel art NFT collection. 
+            Each Clonk features strong street culture vibes, bold attitude, 
+            and a distinctive retro-futuristic style. Built completely on the blockchain.
+        </p>
 
         <!-- Social -->
         <div class="social">
