@@ -13,10 +13,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Courier New', monospace;
+            font-family: 'Courier New', 'Lucida Console', monospace;
             overflow: hidden;
             image-rendering: pixelated;
-            padding: 20px 10px;
+            padding: 15px;
         }
         .container {
             text-align: center;
@@ -25,14 +25,14 @@
         }
         .logo {
             max-width: 100%;
-            width: 580px;
+            width: 560px;
             image-rendering: pixelated;
             margin-bottom: 10px;
             border: 8px solid #000;
-            box-shadow: 0 0 30px rgba(255, 0, 255, 0.6);
+            box-shadow: 0 0 35px rgba(255, 0, 255, 0.6);
         }
         .clonks-text {
-            font-size: 78px;
+            font-size: 68px;
             font-weight: bold;
             color: #ff00ff;
             text-shadow: 
@@ -42,30 +42,37 @@
                 -3px 3px 0 #000;
             letter-spacing: 4px;
             margin: 8px 0 6px;
+            line-height: 1;
         }
         .subtitle {
-            font-size: 22px;
+            font-size: 21px;
             color: #00ffff;
-            margin: 8px 0 25px;
+            margin: 10px 0 20px;
             text-shadow: 3px 3px 0 #000;
         }
         .mint-soon {
-            font-size: 32px;
+            font-size: 29px;
             color: #ffff00;
             margin: 20px 0 40px;
             text-shadow: 4px 4px 0 #000;
         }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+            margin: 10px 0 30px;
+        }
         .btn {
             font-size: 18px;
             padding: 16px 40px;
-            margin: 8px;
             border: 4px solid #ff00ff;
             background: transparent;
             color: white;
             cursor: pointer;
             font-weight: bold;
             width: 100%;
-            max-width: 280px;
+            max-width: 300px;
         }
         .btn:hover {
             background: #ff00ff;
@@ -76,14 +83,18 @@
             color: black;
         }
         .social {
-            margin-top: 50px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
         }
         .social a {
-            margin: 0 18px;
-            display: inline-block;
+            display: flex;
+            align-items: center;
         }
         .footer {
-            margin-top: 70px;
+            margin-top: 50px;
             color: #555;
             font-size: 15px;
         }
@@ -100,18 +111,18 @@
         <p class="subtitle">FULLY ONCHAIN PIXEL ART NFT</p>
         <p class="mint-soon">MINT COMING SOON</p>
 
-        <div>
+        <div class="buttons">
             <button class="btn">Connect Wallet</button>
             <button class="btn btn-mint">Mint Clonks</button>
         </div>
 
         <!-- Social Media -->
         <div class="social">
-            <a href="https://x.com/clonksnft" target="_blank" style="font-size:48px; text-decoration:none;">
+            <a href="https://x.com/clonksnft" target="_blank" style="font-size:52px; text-decoration:none;">
                 𝕏
             </a>
             <a href="#" onclick="alert('OpenSea Coming Soon! 🔥'); return false;">
-                <img src="https://static.seadn.io/logos/OpenSea-Full-Logo%20(dark).png" width="150" alt="OpenSea">
+                <img src="https://static.seadn.io/logos/OpenSea-Full-Logo%20(dark).png" width="145" alt="OpenSea">
             </a>
         </div>
 
