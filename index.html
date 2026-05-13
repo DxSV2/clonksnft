@@ -13,14 +13,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Courier New', 'Lucida Console', monospace;
+            font-family: 'Courier New', monospace;
             overflow: hidden;
             image-rendering: pixelated;
             padding: 15px;
             position: relative;
         }
 
-        /* Grid Background */
         .grid {
             position: absolute;
             top: 0; left: 0;
@@ -28,7 +27,7 @@
             background: linear-gradient(rgba(0,255,200,0.08) 1px, transparent 1px),
                         linear-gradient(90deg, rgba(0,255,200,0.08) 1px, transparent 1px);
             background-size: 40px 40px;
-            animation: gridMove 35s linear infinite;
+            animation: gridMove 40s linear infinite;
             z-index: 1;
         }
 
@@ -37,28 +36,25 @@
             100% { background-position: 40px 40px; }
         }
 
-        .container { text-align: center; max-width: 640px; width: 100%; z-index: 2; }
+        .container { 
+            text-align: center; 
+            max-width: 640px; 
+            width: 100%; 
+            z-index: 2; 
+        }
 
-        /* Logo Animation */
         .logo {
             max-width: 100%;
             width: 560px;
             image-rendering: pixelated;
             margin-bottom: 15px;
             border: 8px solid #000;
-            box-shadow: 0 0 30px rgba(0, 255, 200, 0.4);
-            animation: logoAnim 3.5s ease-in-out infinite alternate;
+            animation: logoAnim 4s ease-in-out infinite alternate;
         }
 
         @keyframes logoAnim {
-            from { 
-                transform: scale(1) rotate(-1deg); 
-                box-shadow: 0 0 20px rgba(0, 255, 200, 0.4); 
-            }
-            to { 
-                transform: scale(1.04) rotate(1deg); 
-                box-shadow: 0 0 60px rgba(0, 255, 200, 0.85); 
-            }
+            from { transform: scale(1); }
+            to   { transform: scale(1.04); }
         }
 
         .clonks-text {
@@ -67,11 +63,11 @@
             color: #f5e8c7;
             text-shadow: 6px 6px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000;
             letter-spacing: 4px;
-            margin: 8px 0 8px;
+            margin: 8px 0;
         }
 
-        .subtitle { font-size: 21px; color: #00ffcc; margin: 10px 0 20px; text-shadow: 3px 3px 0 #000; }
-        .mint-soon { font-size: 29px; color: #ffff00; margin: 20px 0 35px; text-shadow: 4px 4px 0 #000; }
+        .subtitle { font-size: 21px; color: #00ffcc; margin: 10px 0 20px; }
+        .mint-soon { font-size: 29px; color: #ffff00; margin: 20px 0 35px; }
 
         .btn {
             font-size: 18px;
@@ -82,7 +78,8 @@
             font-weight: bold;
             width: 100%;
             max-width: 300px;
-            cursor: default;
+            margin: 10px auto;
+            display: block;
         }
 
         .description {
@@ -90,9 +87,45 @@
             line-height: 1.6;
             font-size: 17px;
             color: #ddd;
-            padding: 0 10px;
         }
 
         .social {
             margin-top: 40px;
-           
+            font-size: 55px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            color: #88aabb;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid"></div>
+
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/DxSV2/clonksnft/main/IMG_20260511_051854.png" class="logo" alt="CLONKS">
+        <div class="clonks-text">CLONKS</div>
+        
+        <p class="subtitle">FULLY ONCHAIN PIXEL ART NFT</p>
+        <p class="mint-soon">MINT COMING SOON</p>
+
+        <button class="btn">About</button>
+
+        <p class="description">
+            Clonks is a unique fully on-chain pixel art NFT collection. 
+            Each Clonks features strong street culture vibes, bold attitude, 
+            and a distinctive retro-futuristic style. Built completely on the blockchain.
+        </p>
+
+        <div class="social">
+            <a href="https://x.com/clonksnft" target="_blank" style="color:#fff; text-decoration:none;">𝕏</a>
+        </div>
+
+        <div class="footer">
+            ©2026 Clonks. All rights reserved
+        </div>
+    </div>
+</body>
+</html>
