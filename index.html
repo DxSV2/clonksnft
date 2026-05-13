@@ -28,7 +28,7 @@
             background: linear-gradient(rgba(0,255,200,0.08) 1px, transparent 1px),
                         linear-gradient(90deg, rgba(0,255,200,0.08) 1px, transparent 1px);
             background-size: 40px 40px;
-            animation: gridMove 30s linear infinite;
+            animation: gridMove 35s linear infinite;
             z-index: 1;
         }
 
@@ -39,6 +39,7 @@
 
         .container { text-align: center; max-width: 640px; width: 100%; z-index: 2; }
 
+        /* Logo Animation */
         .logo {
             max-width: 100%;
             width: 560px;
@@ -46,12 +47,18 @@
             margin-bottom: 15px;
             border: 8px solid #000;
             box-shadow: 0 0 30px rgba(0, 255, 200, 0.4);
-            animation: logoGlow 4s ease-in-out infinite alternate;
+            animation: logoAnim 3.5s ease-in-out infinite alternate;
         }
 
-        @keyframes logoGlow {
-            from { box-shadow: 0 0 20px rgba(0, 255, 200, 0.4); }
-            to   { box-shadow: 0 0 55px rgba(0, 255, 200, 0.9); }
+        @keyframes logoAnim {
+            from { 
+                transform: scale(1) rotate(-1deg); 
+                box-shadow: 0 0 20px rgba(0, 255, 200, 0.4); 
+            }
+            to { 
+                transform: scale(1.04) rotate(1deg); 
+                box-shadow: 0 0 60px rgba(0, 255, 200, 0.85); 
+            }
         }
 
         .clonks-text {
@@ -88,84 +95,4 @@
 
         .social {
             margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .footer {
-            margin-top: 50px;
-            color: #88aabb;
-            font-size: 15px;
-        }
-
-        /* Pixel Rain */
-        .pixels {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: 1;
-            overflow: hidden;
-        }
-        .pixel {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: #00ffcc;
-            opacity: 0.7;
-            animation: fall linear infinite;
-        }
-        @keyframes fall {
-            to { transform: translateY(100vh); }
-        }
-    </style>
-</head>
-<body>
-    <div class="grid"></div>
-    <div class="pixels" id="pixels"></div>
-
-    <div class="container">
-        <img src="https://raw.githubusercontent.com/DxSV2/clonksnft/main/IMG_20260511_051854.png" class="logo" alt="CLONKS">
-        <div class="clonks-text">CLONKS</div>
-        
-        <p class="subtitle">FULLY ONCHAIN PIXEL ART NFT</p>
-        <p class="mint-soon">MINT COMING SOON</p>
-
-        <div>
-            <button class="btn">About</button>
-        </div>
-
-        <p class="description">
-            Clonks is a unique fully on-chain pixel art NFT collection. 
-            Each Clonks features strong street culture vibes, bold attitude, 
-            and a distinctive retro-futuristic style. Built completely on the blockchain.
-        </p>
-
-        <!-- Social -->
-        <div class="social">
-            <a href="https://x.com/clonksnft" target="_blank" style="font-size:55px; text-decoration:none; color:#fff;">𝕏</a>
-            <a href="#" onclick="alert('OpenSea Coming Soon! 🔥'); return false;">
-                <img src="https://static.seadn.io/logos/OpenSea-Full-Logo%20(dark).png" width="145" alt="OpenSea">
-            </a>
-        </div>
-
-        <div class="footer">
-            ©2026 Clonks. All rights reserved
-        </div>
-    </div>
-
-    <script>
-        function createPixel() {
-            const pixel = document.createElement('div');
-            pixel.classList.add('pixel');
-            pixel.style.left = Math.random() * 100 + 'vw';
-            pixel.style.animationDuration = (Math.random() * 4 + 3) + 's';
-            document.getElementById('pixels').appendChild(pixel);
-            setTimeout(() => pixel.remove(), 7000);
-        }
-        setInterval(createPixel, 70);
-    </script>
-</body>
-</html>
+           
