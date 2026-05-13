@@ -20,7 +20,6 @@
             position: relative;
         }
 
-        /* Background Grid */
         .grid {
             position: absolute;
             top: 0; left: 0;
@@ -37,7 +36,6 @@
             100% { background-position: 40px 40px; }
         }
 
-        /* Pixel Rain */
         .pixels {
             position: absolute;
             top: 0; left: 0;
@@ -51,21 +49,15 @@
             width: 4px;
             height: 4px;
             background: #00ffcc;
-            opacity: 0.65;
+            opacity: 0.7;
             animation: fall linear infinite;
         }
         @keyframes fall {
             to { transform: translateY(100vh); }
         }
 
-        .container { 
-            text-align: center; 
-            max-width: 640px; 
-            width: 100%; 
-            z-index: 2; 
-        }
+        .container { text-align: center; max-width: 640px; width: 100%; z-index: 2; }
 
-        /* Logo Animation */
         .logo {
             max-width: 100%;
             width: 560px;
@@ -112,7 +104,14 @@
             color: #ddd;
         }
 
-        .social { margin-top: 30px; font-size: 55px; }
+        .characters {
+            max-width: 100%;
+            margin: 30px auto 20px;
+            image-rendering: pixelated;
+            border: 6px solid #000;
+        }
+
+        .social { margin-top: 20px; font-size: 55px; }
         .footer { margin-top: 40px; color: #88aabb; font-size: 15px; }
     </style>
 </head>
@@ -135,6 +134,10 @@
             and a distinctive retro-futuristic style. Built completely on the blockchain.
         </p>
 
+        <!-- Gambar Karakter -->
+        <img src="https://raw.githubusercontent.com/DxSV2/clonksnft/main/051437c6-3c12-491c-bd3c-85dffeadcef4.png" 
+             class="characters" alt="Clonks Characters">
+
         <div class="social">
             <a href="https://x.com/clonksnft" target="_blank" style="color:#fff; text-decoration:none;">𝕏</a>
         </div>
@@ -145,17 +148,15 @@
     </div>
 
     <script>
-        // Pixel Rain Animation
         function createPixel() {
             const pixel = document.createElement('div');
             pixel.classList.add('pixel');
             pixel.style.left = Math.random() * 100 + 'vw';
             pixel.style.animationDuration = (Math.random() * 4 + 3) + 's';
-            pixel.style.opacity = Math.random() * 0.6 + 0.4;
             document.getElementById('pixels').appendChild(pixel);
-            setTimeout(() => pixel.remove(), 8000);
+            setTimeout(() => pixel.remove(), 7000);
         }
-        setInterval(createPixel, 65);
+        setInterval(createPixel, 70);
     </script>
 </body>
 </html>
