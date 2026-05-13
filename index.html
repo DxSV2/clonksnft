@@ -4,93 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLONKS NFT</title>
-    <link rel="stylesheet" href="https://unpkg.com/98.css">
     <style>
         body {
-            background: #0a4d6b;
+            background: #0a0a0f;
+            color: white;
             margin: 0;
             height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Courier New', monospace;
             overflow: hidden;
-            font-family: 'MS Sans Serif', sans-serif;
+            image-rendering: pixelated;
         }
-        .desktop {
-            height: 100%;
-            padding: 10px;
-            position: relative;
+        .container {
+            text-align: center;
         }
         .logo {
-            max-width: 520px;
+            max-width: 620px;
             image-rendering: pixelated;
-            margin: 20px auto;
-            display: block;
+            margin-bottom: 15px;
+            border: 8px solid #000;
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.6);
         }
-        .footer {
-            position: absolute;
-            bottom: 12px;
-            width: 100%;
-            text-align: center;
+        .clonks-text {
+            font-size: 88px;
+            font-weight: bold;
+            color: #ff00ff;
+            text-shadow: 
+                6px 6px 0 #000,
+                -3px -3px 0 #000,
+                3px -3px 0 #000,
+                -3px 3px 0 #000;
+            letter-spacing: 6px;
+            margin: 10px 0 8px;
+        }
+        .subtitle {
+            font-size: 26px;
+            color: #00ffff;
+            margin: 10px 0 30px;
+            text-shadow: 3px 3px 0 #000;
+        }
+        .mint-soon {
+            font-size: 38px;
+            color: #ffff00;
+            margin: 25px 0 50px;
+            text-shadow: 4px 4px 0 #000;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 16px 48px;
+            margin: 12px;
+            border: 4px solid #ff00ff;
+            background: transparent;
             color: white;
-            font-size: 12px;
-            text-shadow: 1px 1px 2px black;
-        }
-        .social img {
-            width: 38px;
-            margin: 0 12px;
             cursor: pointer;
-            transition: all 0.2s;
+            font-weight: bold;
+            transition: all 0.3s;
         }
-        .social img:hover {
-            transform: scale(1.1);
+        .btn:hover {
+            background: #ff00ff;
+            color: black;
+            transform: scale(1.05);
+        }
+        .btn-mint {
+            background: #ff00ff;
+            color: black;
+            border-color: #ff00ff;
+        }
+        .social {
+            margin-top: 60px;
+        }
+        .social a {
+            margin: 0 20px;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
-    <div class="desktop">
+    <div class="container">
+        
+        <img src="https://raw.githubusercontent.com/DxSV2/clonksnft/main/IMG_20260511_051854.png" 
+             class="logo" alt="CLONKS">
 
-        <!-- Icon Desktop -->
-        <div style="position:absolute; top:30px; left:40px; text-align:center; color:white; text-shadow:1px 1px 2px black; cursor:pointer;">
-            <img src="https://win98icons.alexmeub.com/icons/png/computer_explorer-4.png" width="48"><br>
-            <div>Clonks.exe</div>
+        <div class="clonks-text">CLONKS</div>
+        
+        <p class="subtitle">FULLY ONCHAIN PIXEL ART NFT</p>
+        <p class="mint-soon">MINT COMING SOON</p>
+
+        <div>
+            <button class="btn">Connect Wallet</button>
+            <button class="btn btn-mint">Mint Clonk</button>
         </div>
 
-        <!-- Main Window -->
-        <div class="window" style="width: 680px; position:absolute; top:60px; left:150px;">
-            <div class="title-bar">
-                <div class="title-bar-text">CLONKS NFT - Onchain Pixel Collection</div>
-                <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close"></button>
-                </div>
-            </div>
-            <div class="window-body" style="text-align:center; padding:20px;">
-                
-                <img src="https://raw.githubusercontent.com/DxSV2/clonksnft/main/IMG_20260511_051854.png" 
-                     class="logo" alt="CLONKS">
-
-                <p style="font-size:20px; margin:10px 0; color:#ffcc00;">FULLY ONCHAIN PIXEL ART NFT</p>
-                <p style="color:#fff; font-size:18px;">COLLAB OPEN</p>
-                
-                <br><br>
-                <button class="btn" style="font-size:17px; padding:10px 32px;">Connect Wallet</button>
-                <button class="btn" style="font-size:17px; padding:10px 32px; margin-left:15px; background:#c00; color:white;">Mint Clonk</button>
-
-                <!-- Social Media -->
-                <div class="social" style="margin-top: 35px;">
-                    <a href="https://x.com/clonksnft" target="_blank">
-                        <img src="https://win98icons.alexmeub.com/icons/png/internet_mail-4.png" alt="X">
-                    </a>
-                    <a href="#" onclick="alert('OpenSea Coming Soon! 🚀'); return false;">
-                        <img src="https://static.seadn.io/logos/OpenSea-Full-Logo%20(dark).png" alt="OpenSea">
-                    </a>
-                </div>
-            </div>
+        <!-- Social Media -->
+        <div class="social">
+            <a href="https://x.com/clonksnft" target="_blank">
+                <img src="https://win98icons.alexmeub.com/icons/png/internet_mail-4.png" width="52" alt="X">
+            </a>
+            <a href="#" onclick="alert('OpenSea Coming Soon! 🔥'); return false;">
+                <img src="https://static.seadn.io/logos/OpenSea-Full-Logo%20(dark).png" width="160" alt="OpenSea">
+            </a>
         </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            © 2026 CLONKS NFT - All Rights Reserved
-        </div>
+        <p style="margin-top: 80px; color: #555; font-size: 16px;">
+            © 2026 CLONKS NFT — All Rights Reserved
+        </p>
 
     </div>
 </body>
